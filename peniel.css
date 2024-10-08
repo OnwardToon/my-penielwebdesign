@@ -290,7 +290,7 @@ section p {
     color: white;
     border-radius: 24px;
     padding: 24px 32px;
-    background: var(--dark-blue-color);
+    background: var(--light-blue-color)
 }
 
 .testimonial-section .testimonial-card:last-child .content {
@@ -901,8 +901,8 @@ nav.mobile-nav,
     
     .achievement-card.students-enrolled {
         left: 0;
-        top: 480px;
-        width: 150px;
+        top: 460px;
+        width: 120px;
         position: absolute;
     }
      
@@ -910,11 +910,16 @@ nav.mobile-nav,
     .achievement-card.overall-rating {
         left: 15%;
         top: 10px;
-        width: 150px;
+        width: 120px;
     }
      
     .achievement-card .content {
         font-size: 20px;
+    }
+
+    .achievement-card .content img {
+        width: 25px;
+
     }
 
     .testimonial-section .testimonial-card img {
@@ -933,10 +938,10 @@ nav.mobile-nav,
     }
 
     .testimonial-section .testimonial-card:last-child::before {
-        
         right: 30px;
-        height: 240px;
+        height: 200px;
     }
+        
 
     .testimonial-section .testimonial-card::before {
         left: 36px;
@@ -984,56 +989,7 @@ nav.mobile-nav,
         padding: 8px 32px;
     }
 
-    /* General mobile styles */
-@media (max-width: 600px) {
-    /* Styles for small devices (phones in portrait mode) */
-    body {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    .container {
-      width: 100%;
-    }
-  
-    .testimonial-section .testimonial-card .content {
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  }
-  
-  /* Larger phones like Pixel 2XL */
-  @media (min-width: 601px) and (max-width: 768px) {
-    /* Styles for larger phones or smaller tablets */
-    body {
-      font-size: 16px;
-      padding: 15px;
-    }
-  
-    .container {
-      width: 95%;
-    }
-  
-    .testimonial-section .testimonial-card .content {
-      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
-  
-  /* Tablets and above */
-  @media (min-width: 769px) {
-    /* Styles for tablets and larger devices */
-    body {
-      font-size: 18px;
-      padding: 20px;
-    }
-  
-    .container {
-      width: 90%;
-    }
-  
-    .testimonial-section .testimonial-card .content {
-      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
-    }
-  }
+   
   
 
    
