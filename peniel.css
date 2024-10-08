@@ -271,8 +271,9 @@ section p {
   box-shadow: 10px 20px 36px hsl(282, 100%, 50%); 
   border-radius: 24px;
   margin-bottom: 50px;
-  position: relative;
+  position: relative; 
 }
+
 
 .testimonial-section .testimonial-card img {
     width: 110px;
@@ -289,8 +290,7 @@ section p {
     color: white;
     border-radius: 24px;
     padding: 24px 32px;
-    background: var(--light-blue-color);
-    box-shadow: var(--orange-color);
+    background: var(--dark-blue-color);
 }
 
 .testimonial-section .testimonial-card:last-child .content {
@@ -868,21 +868,18 @@ nav.mobile-nav,
         padding-left: 200px;
     }
   
-
-    .hero-section .wrapper {
-        height: 3000px;
-    }
-    
     .mobile-menu-container .close-icon {
         right: 100px;
     }
+
+    
     
     nav .logo {
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .hero-section .left h1 {
-         font-size: 30px;
+         font-size: 20px;
     }
     
     .hero-section .right img {
@@ -917,7 +914,7 @@ nav.mobile-nav,
     }
      
     .achievement-card .content {
-        font-size: 60px;
+        font-size: 20px;
     }
 
     .testimonial-section .testimonial-card img {
@@ -927,11 +924,11 @@ nav.mobile-nav,
     }
 
     .testimonial-section .testimonial-card .info h4 {
-        font-size: 33px;
+        font-size: 20px;
     }
 
     .testimonial-section .testimonial-card .content {
-        font-size: 25px;
+        font-size: 20px;
         word-break: break-word; /* Breaks long words that don’t fit */
     }
 
@@ -986,6 +983,58 @@ nav.mobile-nav,
     footer form input {
         padding: 8px 32px;
     }
+
+    /* General mobile styles */
+@media (max-width: 600px) {
+    /* Styles for small devices (phones in portrait mode) */
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  
+    .testimonial-section .testimonial-card .content {
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Larger phones like Pixel 2XL */
+  @media (min-width: 601px) and (max-width: 768px) {
+    /* Styles for larger phones or smaller tablets */
+    body {
+      font-size: 16px;
+      padding: 15px;
+    }
+  
+    .container {
+      width: 95%;
+    }
+  
+    .testimonial-section .testimonial-card .content {
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Tablets and above */
+  @media (min-width: 769px) {
+    /* Styles for tablets and larger devices */
+    body {
+      font-size: 18px;
+      padding: 20px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+  
+    .testimonial-section .testimonial-card .content {
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
 
    
 
