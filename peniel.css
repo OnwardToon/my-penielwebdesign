@@ -521,6 +521,14 @@ footer .social a img {
     padding-left: 10px;
 }
 
+.footer .social a img {
+    transition: 500ms;
+}
+
+.footer .social a img:hover {
+    transform: scale(1.2);
+}
+
 footer p {
     padding-left: 120px;
     font-family:"Poppins" sans-serif;
@@ -560,7 +568,6 @@ footer form .Submit-btn {
     padding: 8px 30px;
     background: #070917;
 }
-
 
 footer ul li a {
     pointer-events: auto; /* Ensure links remain clickable */
