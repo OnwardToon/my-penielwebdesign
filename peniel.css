@@ -507,8 +507,8 @@ footer .social img {
     color: #090250;
 }
 
-footer .links li {
-    padding: 12px;
+footer .links li a {
+    padding: 0;
     list-style: none;
 }
 
@@ -521,11 +521,11 @@ footer .social a img {
     padding-left: 10px;
 }
 
-.footer .social a img {
+footer .social a img {
     transition: 500ms;
 }
 
-.footer .social a img:hover {
+footer .social a img:hover {
     transform: scale(1.2);
 }
 
@@ -570,11 +570,11 @@ footer form .Submit-btn {
 }
 
 footer ul li a {
-    pointer-events: auto; /* Ensure links remain clickable */
+    pointer-events: auto; 
 }
 
 footer h3 {
-    pointer-events: none !important; /* Use !important to override any other conflicting styles */
+    cursor: none;
 }
 
 nav.mobile-nav,
@@ -588,19 +588,65 @@ nav.mobile-nav,
     .btn {
         padding: 12px 32px;
     }
+    
     .wrapper {
-        padding: 0 100px;
+        padding: 0 60px;
     }
 
     nav {
-        width: 100%;
-        right: 0;
-        left: 0;
-        padding: 36px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 1000px;
+        z-index: 100;
+        padding-right: 20px;
+        transition: 500ms ease;
+        padding-left: 0;
+        margin: 0 auto;
+        gap: 100px;
     }
 
     nav.scrolled {
-        padding: 16px 100px;
+        background: var(--dark-color);
+        border-radius: 0 0 16px 16px;
+        padding-left: 12px;
+        box-shadow: 0px 6px 6px  rgb(238, 234, 0);
+        margin: 0;
+    }
+    
+    nav .logo {
+        color: white;
+        font-size: 40px;
+        font-family: "Poppins" sans-serif;
+        font-weight: 900;
+        padding-top: 10px;
+        
+    }
+    
+    nav ul {
+        align-items: center;
+        gap: 40px;
+        font-size: 20px;
+        font-family: "Poppins" sans-serif;
+        font-weight: 20;
+        padding-left: 12px;
+        
+    }
+    
+    nav ul li {
+        list-style: none;
+        color: white;
+        margin: 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        font-family:"Poppins" sans-serif;
+        padding: 10px;
     }
 
     header,
@@ -771,35 +817,30 @@ nav.mobile-nav,
         grid-column: 1 / 3;
     }
 
-    nav{ display: none};
-
-
-
 }
 
 
 @media (max-width:800px) {
+    .wrapper {
+        padding: 0 40px;
+    }
+    
     nav {
         display: none ;
+        gap: 20px;
+        width: 725px;
     }
-    nav.mobile-nav {
-        display: flex;
-       
-    }
-
     
-    nav.mobile-nav.scrolled {
-      background: var(--dark-color);
-      border-radius: 0 0 16px 16px;
-      padding-left:  12px;
-      
-      box-shadow: 0px 6px 6px  rgb(238, 234, 0);
+    nav.mobile-nav {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 20px;
     }
 
-    .hero-section .right img {
+   .hero-section .right img {
         width: 300px;
         height: 500px;
-
     }
 
     .mobile-menu-container {
@@ -851,7 +892,7 @@ nav.mobile-nav,
 
 @media (max-width: 700px) {
     .wrapper {
-       padding: 0 32px;
+       padding: 0 40px;
     }
 
     html, body {
@@ -859,47 +900,70 @@ nav.mobile-nav,
         padding: 0;
         overflow-x: hidden;
     }
-      
-       
 
     .hero-section .left p {
         width: 100%;
     }
 
     .hero-section .right {
-        padding: 0;
+        align-self: flex-end;
+       
+    }
+    
+    .hero-section .right img {
+        width: 800px;
+        height: 600px;
+        vertical-align: middle;
     }
 
-    
-    nav.mobile-nav .menu-icon {
-        padding-left: 200px;
-    }
-  
     .mobile-menu-container .close-icon {
         right: 100px;
     }
 
-    
-    
     nav .logo {
-        font-size: 20px;
+        font-size: 35px;
+    }
+
+    nav {
+        display: none ;
+        gap: 20px;
+        width: 600px;
+        margin: 0;
+        height: 60px;
+    }
+    
+    nav.mobile-nav {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 20px;
+       width: 650px;
+       margin: 0;  
+    }
+
+    nav.scrolled {
+        max-width: 630px; 
+        margin: 0; 
     }
     
     .hero-section .left h1 {
-         font-size: 20px;
+        font-size: 50px;
     }
     
     .hero-section .right img {
         height: 300px;
-        width: 200px;
+        width: 800px;
+        padding-right: 400px;
     }
     
-    .hero-section .right {
-        transform: translateX(180px);
-    }
-    
+  
     .hero-section .left h1 {
         margin-bottom: 0;
+    }
+
+    .hero-section .left p {
+        font-size: 24px;
+        
     }
     
     nav.mobile-nav.scrolled {
@@ -907,17 +971,20 @@ nav.mobile-nav,
     }
     
     .achievement-card.students-enrolled {
-        left: 0;
-        top: 460px;
-        width: 120px;
+        left: 260px;
+        top: 200px;
+        width: 240px;
         position: absolute;
+        text-align: center;
     }
      
          
     .achievement-card.overall-rating {
-        left: 15%;
-        top: 10px;
-        width: 120px;
+        left: 20px;
+        top: 900px;
+        width: 240px;
+        position: absolute;
+        text-align: center;
     }
      
     .achievement-card .content {
@@ -997,30 +1064,227 @@ nav.mobile-nav,
     }
 
    
-  
-
-   
-
-   
-    
 }
 
+@media (max-width: 360px) {
+    .wrapper {
+       padding: 0 10px;
+    }
 
-   
-   
+    nav {
+        display: none;
+       max-width: 340px;
+        padding-left: 0;
+    }
+
+    nav.mobile-nav {
+        max-width: 340px;
+    }
+
+    nav.scrolled {
+        width: fit-content;
+        padding-left: 0;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+      
+    .hero-section .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }  
+
+    .hero-section .left p {
+        width: fit-content;
+        font-style: italic;
+    }
+
+    .hero-section .right img {
+        padding-right: 60px;
+        
+    }
 
     
-
-    
-
-
-
-
+    nav.mobile-nav .menu-icon {
+        padding-left: 200px;
+    }
   
+    .mobile-menu-container .close-icon {
+        right: 100px;
+    }
 
+    nav .logo {
+        font-size: 20px;
+    }
+    
+    .hero-section .left h1 {
+        font-size: 20px;
+        padding-bottom: 0;
+       
+    }
+    
+    .hero-section .right img {
+        height: 300px;
+        width: 200px;
+    }
+    
+    .hero-section .right {
+        transform: translateX(180px);
+    }
+    
+    .hero-section .left p {
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        padding-top: 0;
+        font-size: 16px;
+        width: fit-content;
+        margin-right: 20px;
+    }
 
+    .hero-section .left .btn {
+        margin-top: 0;
+    }
 
+    .btn.light {
+        margin-left: 0;
+    }
+    
+    nav.mobile-nav.scrolled {
+        width: 100%;
+    }
+    
+    .achievement-card.students-enrolled {
+        left: 60px;
+        top: 600px;
+        width: 120px;
+        position: absolute;
+    }
 
+    .achievement-card.students-enrolled .content {
+        align-items: center;
+    }
+         
+    .achievement-card.overall-rating {
+        left: 180px;
+        top: 200px;
+        width: 100px;
+       
+    }
+     
+    .achievement-card .content {
+        font-size: 20px;
+    }
 
+    .achievement-card .content img {
+        width: 25px;
+    }
 
+    .testimonial-section .testimonial-card img {
+        height: 150px;
+        width: 100px;
+        right: 10px;
+    }
 
+    .courses-section h2 {
+        font-size: 50px;
+    }
+
+    .testimonial-section .right h2 {
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .testimonial-section .right p {
+        font-size: 20px;
+        font-family:"Poppins" sans-serif;
+        font-style: italic;
+        padding-bottom: 0;
+    }
+
+    .testimonial-section .testimonial-card .info h4 {
+        font-size: 20px;
+    }
+
+    .testimonial-section .testimonial-card:last-child {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .testimonial-section .testimonial-card .content {
+        font-size: 20px;
+        word-break: break-word;
+    }
+
+    .testimonial-section .testimonial-card:last-child::before {
+        right: 30px;
+        height: 200px;
+    }
+        
+
+    .testimonial-section .testimonial-card::before {
+        left: 36px;
+        
+    }
+
+    .courses-section .course-cards .duration {
+        white-space: nowrap;
+    }
+
+    .courses-section .wrapper .btn {
+        margin-left: 120px;
+        margin-right: 0;
+        
+        position: relative;
+    }
+
+    .app-section .app-buttons {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .app-section {
+        padding-bottom: 40px;
+    }
+
+    .app-section h2 {
+        font-size: 50px;
+    }
+        
+
+    .app-section .app-btn {
+        width: 200px;
+    }
+
+    .app-section p {
+        font-style: italic;
+    }
+
+    footer .links-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    footer .links-container .links:last-child {
+        grid-column: 1 / 2;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+
+    footer p {
+        padding-left: 80px; 
+        margin-top: 40px;
+    }
+
+    footer form input {
+        padding: 8px 32px;
+    }
+
+   
+}
