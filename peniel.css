@@ -1169,7 +1169,7 @@ nav.mobile-nav,
          
     .achievement-card.overall-rating {
         left: 180px;
-        top: 200px;
+        top: 230px;
         width: 100px;
        
     }
@@ -1182,15 +1182,16 @@ nav.mobile-nav,
         width: 25px;
     }
 
+    .testimonial-section .testimonial-card {
+        box-shadow: 10px 10px 10px hsl(282, 46%, 60%); 
+    }
+
     .testimonial-section .testimonial-card img {
         height: 150px;
         width: 100px;
         right: 10px;
     }
 
-    .courses-section h2 {
-        font-size: 50px;
-    }
 
     .testimonial-section .right h2 {
         padding-top: 0;
@@ -1232,6 +1233,18 @@ nav.mobile-nav,
 
     .courses-section .course-cards .duration {
         white-space: nowrap;
+    }
+
+    .courses-section .course-cards .course-card {
+       box-shadow: 5px 5px 5px 5px hsl(200, 40%, 16%); 
+    }
+
+    .courses-section h2 {
+        font-size: 50px;
+    }
+
+    .courses-section .course-cards h3 {
+        font-size: 24px;
     }
 
     .courses-section .wrapper .btn {
