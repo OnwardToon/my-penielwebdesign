@@ -167,5 +167,12 @@ h2 {
     input[type="text"]:nth-of-type(2) {
        margin-left: 0;
     }
+
+    .achievement-card.overall-rating {
+        left: 180px;
+        top: 170px;
+        width: 100px;
+    }
+     
 }
 
